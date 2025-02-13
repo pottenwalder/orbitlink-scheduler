@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import type { Booking } from "@/types/booking";
 
 const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:5000";
 
@@ -19,7 +18,7 @@ async function fetchFromBackend(path: string, options?: RequestInit) {
   return response;
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const response = await fetchFromBackend("/bookings");
     const bookings = await response.json();
