@@ -13,11 +13,12 @@
     "typescript": "5.7.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.x"
   },
   "packageManager": "npm@9.6.7",
   "workspaces": [
-    "apps/*",
+    "apps/frontend",
+    "apps/backend",
     "packages/*"
   ]
 }
